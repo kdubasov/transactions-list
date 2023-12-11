@@ -1,0 +1,7 @@
+.PaginationBlock .page-link{
+   border-radius: 8px;
+}
+.PaginationBlock .page-item.active .page-link{
+   background: var(--app-primary);
+   border: 1px solid var(--app-primary);
+}

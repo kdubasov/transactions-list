@@ -1,0 +1,18 @@
+.wrapper .pagination{
+   --bs-pagination-disabled-border-color: transparent;
+   --bs-pagination-disabled-bg: transparent;
+   --bs-pagination-border-radius: 5px;
+   --bs-pagination-padding-x: 1rem;
+   --bs-pagination-padding-y: .3rem;
+   --bs-pagination-hover-bg: transparent;
+   --bs-pagination-focus-bg: transparent;
+   --bs-pagination-hover-color: var(--app-gray-light);
+}
+
+.wrapper .pagination a,
+.wrapper .pagination li{
+   font-size: 16px;
+   background: none;
+   border: none;
+   color: var(--bs-white);
+}

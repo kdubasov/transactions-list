@@ -1,0 +1,19 @@
+.wrapper{
+   background: var(--app-bg-secondary);
+   border-radius: 17px;
+}
+
+.wrapper h3.title{
+   margin: 0;
+   font-size: 22px;
+   font-weight: 600;
+}
+
+/*containers*/
+.header{
+   border-bottom: 1px solid var(--app-gray);
+}
+.content,
+.header{
+   padding: 24px 1.5em;
+}
