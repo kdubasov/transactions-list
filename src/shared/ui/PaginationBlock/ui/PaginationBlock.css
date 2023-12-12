@@ -5,3 +5,9 @@
    background: var(--app-primary);
    border: 1px solid var(--app-primary);
 }
+
+@media (max-width: 767px) {
+   .PaginationBlock .page-link{
+      font-size: 14px;
+   }
+}

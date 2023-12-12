@@ -13,7 +13,7 @@ const UsersTable = () => {
    const [token, setToken] = useState<'asc' | 'desc'>('asc')
    const [usersList, setUsersList] = useState<null | IUser[]>(null)
    const [ getUsers, { isLoading } ] = useLazyGetUsersQuery()
-   const { searchQuery } = useUsersSlice()
+   const { searchQuery, setSelectedId } = useUsersSlice()
 
    const switchTokenFilters = () => {
       if (token === 'asc') {
@@ -80,7 +80,7 @@ const UsersTable = () => {
             <tbody>
                {
                   usersList?.map(elem => (
-                     <tr key={elem.id}>
+                     <tr key={elem.id} onClick={() => setSelectedId({ email: elem.email, id: elem.id })}>
                         <td>{elem.email}</td>
                         <td>{elem.name}</td>
                         <td>{elem.role}</td>

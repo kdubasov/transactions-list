@@ -1,9 +1,8 @@
 .wrapper{
-   margin-top: 2em;
+   margin-top: 1.5em;
 }
 
 .wrapper table{
-   border-radius: 8px;
    font-size: 14px;
 }
 .wrapper table thead tr th{
@@ -33,6 +32,11 @@
 
 .wrapper tbody tr{
    border-bottom: 1px solid var(--app-dark-blue);
+   transition: .15s;
+}
+.wrapper tbody tr:hover{
+   cursor: pointer;
+   background: var(--app-bg-opac-35);
 }
 .wrapper tbody tr td{
    padding: 1.25em 0;
@@ -66,4 +70,22 @@
    margin-top: 1.85em;
    display: flex;
    justify-content: center;
+}
+
+/*media*/
+@media (max-width: 767px) {
+   .wrapper table thead tr th:not(:nth-child(1)):not(:nth-child(2)),
+   .wrapper table tbody tr td:not(:nth-child(1)):not(:nth-child(2)){
+      display: none;
+   }
+   .wrapper table thead tr th:nth-child(2){
+      border-radius: 0 8px 8px 0;
+   }
+   .wrapper table thead tr th,
+   .wrapper table tbody tr td{
+      max-width: 150px;
+      overflow:hidden;
+      white-space:nowrap;
+      text-overflow: ellipsis;
+   }
 }

@@ -28,14 +28,39 @@ export interface IUserSubscriptionPlan {
    type: EPlanTypes
 }
 
+export interface IUserTransItem {
+   amount: number
+   created_at: Date
+   currency: ECurrency
+   external_id: null
+   id: string
+   meta: null
+   plan_id: null
+   provider: string
+   referral_id: null
+   status: ETransStatus
+   type: ETransType
+   user_id: string
+}
+
 export enum EUserRoles {
    USER
 }
 
 export enum ECurrency {
-   RUB
+   RUB,
+   SYSTEM_TOKEN
 }
 
 export enum EPlanTypes {
    FREE
+}
+
+export enum ETransStatus {
+   SUCCEDED
+}
+
+export enum ETransType {
+   REPLENISH,
+   WRITE_OFF
 }

@@ -16,3 +16,14 @@
    border: none;
    color: var(--bs-white);
 }
+
+@media (max-width: 767px) {
+   .wrapper .pagination{
+      --bs-pagination-padding-x: .85rem;
+      --bs-pagination-padding-y: .25rem;
+   }
+   .wrapper .pagination a,
+   .wrapper .pagination li{
+      font-size: 14px;
+   }
+}

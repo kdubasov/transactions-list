@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import {API_LIST, API_TRANSACTIONS, API_URL, API_USER} from '../../../shared/constants/api.ts'
-import {IUser} from "../../../shared/types/users.ts";
+import {IUser, IUserTransItem} from "../../../shared/types/users.ts";
 
 
 const userApi = createApi({
@@ -10,7 +10,7 @@ const userApi = createApi({
     getUsers: builder.query<{ pages: number, data: IUser[] }, string>({
       query: (query) => API_LIST + query,
     }),
-    getUserTransactions: builder.query<any, string>({
+    getUserTransactions: builder.query<IUserTransItem[], string>({
       query: (query) => query + API_TRANSACTIONS,
     }),
   }),

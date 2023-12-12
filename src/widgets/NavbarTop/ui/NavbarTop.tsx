@@ -19,7 +19,9 @@ const NavbarTop = () => {
             </div>
          </div>
 
-         <UserInfo />
+         <div className={styles.userInfo}>
+            <UserInfo />
+         </div>
       </nav>
    );
 };

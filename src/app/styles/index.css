@@ -2,6 +2,7 @@
 
 :root {
    --app-bg: #0E0C15;
+   --app-bg-opac-35: rgba(14, 12, 21, 0.35);
    --app-bg-secondary: #121825;
    --app-dark-blue: #222B44;
    --app-gray: #616D8D;
@@ -15,7 +16,13 @@
 }
 
 body {
-   height: 100vh;
+   min-height: 100vh;
    padding: 34px 25px;
    background: var(--app-bg);
+}
+
+@media (max-width: 500px) {
+   body {
+      padding: 20px 15px;
+   }
 }

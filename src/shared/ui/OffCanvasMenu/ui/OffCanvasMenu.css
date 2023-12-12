@@ -1,0 +1,5 @@
+.OffCanvasMenu.offcanvas{
+   --bs-offcanvas-width: 470px;
+   background: var(--app-bg-secondary);
+   overflow-y: auto;
+}
